@@ -1,6 +1,10 @@
 function add(numbers){
   if(!(/\d/.test(numbers))) return 0;
   if(Number(numbers)) return parseInt(numbers);
+
+   // Remplace les sauts de ligne par des virgules
+   numbers = numbers.replace(/\n/g, ',');
+
   if (numbers.includes(',')) {
     let numArray = numbers.split(',')
       .map(num => num.trim()) // Supprime les espaces

@@ -59,5 +59,12 @@ describe('Add', () => {
     expect(Add('1 , 1 , 1')).toBe(3);
   });
 
+  it('should return 6 for the string "1,2\\n3"', () => {
+    expect(Add('1,2\n3')).toBe(6);
+  });
+
+  it('should return 5 for the string "2,\\n3"', () => {
+    expect(Add('2,\n3')).toBe(5);
+  });
 
 });
