@@ -1,6 +1,7 @@
 function add(numbers){
-  if(!(/\d/.test(numbers))) return 0;
-  if(Number(numbers)) return parseInt(numbers);
+  if (!numbers || numbers.trim() === "") return 0;
+
+  if (!isNaN(numbers)) return parseInt(numbers);
 
    // Remplace les sauts de ligne par des virgules
    numbers = numbers.replace(/\n/g, ',');
