@@ -20,4 +20,9 @@ describe('Add', () => {
   it('should return 0 for an empty string', () => {
     expect(Add('')).toBe(0);
   });
+
+  it('should return 1 for the string "1"', () => {
+    expect(Add('1')).toBe(1);
+    expect(Add('5')).toBe(5);
+  });
 });
