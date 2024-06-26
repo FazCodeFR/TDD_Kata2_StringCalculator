@@ -34,4 +34,30 @@ describe('Add', () => {
     expect(Add('1,2')).toBe(3);
     expect(Add('5,5')).toBe(10);
   });
+
+  it('should return 6 for the string "1,2,3"', () => {
+    expect(Add('1,2,3')).toBe(6);
+  });
+
+  it('should return 15 for the string "5,5,5"', () => {
+    expect(Add('5,5,5')).toBe(15);
+  });
+
+  it('should return 15 for the string "5,5,5 "', () => {
+    expect(Add('5,5,5 ')).toBe(15);
+  });
+
+  it('should return 15 for the string "5,5,5,"', () => {
+    expect(Add('5,5,5,')).toBe(15);
+  });
+
+  it('should return 10 for the string "1,1,1,1,1,1,1,1,1,1"', () => {
+    expect(Add('1,1,1,1,1,1,1,1,1,1')).toBe(10);
+  });
+
+  it('should return 3 for the string "1 , 1 , 1"', () => {
+    expect(Add('1 , 1 , 1')).toBe(3);
+  });
+
+
 });
