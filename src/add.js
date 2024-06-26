@@ -5,6 +5,10 @@ function add(numbers){
    // Remplace les sauts de ligne par des virgules
    numbers = numbers.replace(/\n/g, ',');
 
+   if (numbers.endsWith(',')) {
+    throw new Error('Invalid input: Trailing separator not allowed');
+  }
+  
   if (numbers.includes(',')) {
     let numArray = numbers.split(',')
       .map(num => num.trim()) // Supprime les espaces

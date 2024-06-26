@@ -48,7 +48,7 @@ describe('Add', () => {
   });
 
   it('should return 15 for the string "5,5,5,"', () => {
-    expect(Add('5,5,5,')).toBe(15);
+    expect(() => Add('5,5,5,')).toThrow('Invalid input: Trailing separator not allowed');
   });
 
   it('should return 10 for the string "1,1,1,1,1,1,1,1,1,1"', () => {
