@@ -17,9 +17,13 @@
 
 const Add = require('../add');
 describe('Add', () => {
-  it('should return 0 for an empty string', () => {
+  it('should return 0 for an empty OR null string', () => {
     expect(Add('')).toBe(0);
+    expect(Add(' ')).toBe(0);
+    expect(Add(null)).toBe(0);
+    expect(Add(undefined)).toBe(0);
   });
+
 
   it('should return 1 for the string "1"', () => {
     expect(Add('1')).toBe(1);
