@@ -66,4 +66,14 @@ describe('Add', () => {
   it('should throw an error for the string "//|\\n1|2,3"', () => {
     expect(() => add('//|\n1|2,3')).toThrow("'|' expected");
   });
+
+
+  // Negative number test cases
+  it('should throw an error for the string "1,-2,3"', () => {
+    expect(() => add('1,-2,3')).toThrow('Negative numbers found: -2');
+  });
+
+  it('should throw an error for the string "1,-2,-3"', () => {
+    expect(() => add('1,-2,-3')).toThrow('Negative numbers found: -2, -3');
+  });
 });

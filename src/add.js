@@ -47,6 +47,12 @@ function sumNumbers(numbers, delimiter) {
         }
         return parseInt(num, 10);
       });
+
+    const negativeNumbers = numArray.filter(num => num < 0);
+    if (negativeNumbers.length > 0) {
+      throw new Error(`Negative numbers found: ${negativeNumbers.join(', ')}`);
+    }
+
     return numArray.reduce((acc, curr) => acc + curr, 0);
   }
   return parseInt(numbers, 10);
