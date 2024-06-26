@@ -29,4 +29,9 @@ describe('Add', () => {
     expect(Add('1')).toBe(1);
     expect(Add('5')).toBe(5);
   });
+
+  it('should return 3 for the string "1,2"', () => {
+    expect(Add('1,2')).toBe(3);
+    expect(Add('5,5')).toBe(10);
+  });
 });
